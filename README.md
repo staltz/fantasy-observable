@@ -10,7 +10,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 ## Overview
 
-Fantasy Observables represent push-based data sources. When transporting data from a *Producer* to a *Consumer*, the process may be *Pull* or *Push*. In Pull systems, the Consumer determines when it receives data from the Producer. In Push systems, the Producer determines when to send data to the Consumer. A Fantasy Observable is a Push system.
+Fantasy Observables represent push-based data sources. When transporting data from a *Producer* to a *Consumer*, the process may be *Pull* or *Push*. In Pull systems, the Consumer determines when it receives data from the Producer. In Push systems, the Producer determines when to send data to the Consumer. Fantasy Observable is a Push system.
 
 In this system, the Producer is an *Observable* and the Consumer is an *Observer*. The observable collection of data may be *invoked* at the Producer with the method `observable.subscribe(observer)`, and from that point onwards data is *pushed* to the `observer`. No further invocation is required at the `observable`. The `subscribe` function returns a *Subscription*. This subscription has an `unsubscribe` method which can be invoked with no arguments to cancel the transportation of data from the Observable to the Observer.
 

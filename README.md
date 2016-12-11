@@ -67,7 +67,7 @@ When an Observable and an Observer are connected through a Subscription initiate
 The above contract may be expressed as a regular expression, specifying that `next` may be invoked zero or multiple times, but if either `error` or `complete` are invoked, no other Observer method invocation can occur:
 
 ```
-next*(error|complete)?
+(next)*(error|complete)?
 ```
 
 # Optional

@@ -22,11 +22,11 @@ An *Observer* is a JavaScript object with three REQUIRED functions as properties
 interface Observer {
   next: (x: any) => void;
   error: (e: any) => void;
-  complete: (c?: any) => void;
+  complete: () => void;
 }
 ```
 
-The `next` and `error` functions MUST receive an argument, but the `complete` function MAY receive an argument.
+The `next` and `error` functions MUST receive an argument, and the `complete` function MUST NOT receive an argument.
 
 Observers represent consumers of push-based data transportation. Data MUST be given to the `next` function by invoking this function with the data as argument. Errors occuring in the data producer MUST be given to the `error` function by invoking this function with the error as argument. The `complete` function MAY be invoked by the producer to inform the consumer that no more data nor errors will be delivered.
 

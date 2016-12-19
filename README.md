@@ -86,7 +86,7 @@ interface ObservableEquivalent<T> {
 
 ## Extra type: Subject
 
-A *Subject* is both an Observable and Observer. It is both a Producer and a Consumer. You may use its Observer methods to send data to the Subject, while you may use the Observable `subscribe` method to consume data from the Subject.
+A *Subject* is both an Observable and an Observer—both a Producer and a Consumer. You may use its Observer methods (`next`, `error` and `complete`) to send it data, while you may also use its Observable `subscribe` method to consume its data.
 
 ```typescript
 interface Subject extends Observable, Observer {}
